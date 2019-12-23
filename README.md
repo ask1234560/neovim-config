@@ -29,7 +29,7 @@ The minimalist feature rich config for neovim
 
 * curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     
-* open nvim, :PlugInstall for cloning plugins, build __youcompleteme__ plugin
+* open nvim, :PlugInstall for cloning plugins, build __YouCompleteMe__ plugin
 
 
 
