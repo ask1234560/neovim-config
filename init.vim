@@ -51,13 +51,13 @@ nmap <silent> <c-l> :wincmd l<CR>
 
 hi Normal guibg=NONE ctermbg=NONE
 
-" turn off hihlight
-nnoremap <Leader><space> :nohlsearch<CR>
+" turn off highlight after search
+nnoremap <silent> <Leader><space> :nohlsearch<CR>
 
 " ctrlp mappings
-nnoremap <Leader>o :CtrlPBuffer<CR>
-nnoremap <Leader>m :CtrlPMRU<CR>
-nnoremap <Leader>p :CtrlP<CR>
+nnoremap <silent> <Leader>o :CtrlPBuffer<CR>
+nnoremap <silent> <Leader>m :CtrlPMRU<CR>
+nnoremap <silent> <Leader>p :CtrlP<CR>
 
 " change directory according to fie
 nmap <Leader>c :lcd %:p:h<CR>
@@ -66,6 +66,9 @@ let g:ycm_global_ycm_extra_conf = '~/.config/nvim/plugged/YouCompleteMe/.ycm_ext
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 
+" :q :terminal key binding
+nmap <silent> <Leader>q :q<CR>
+nmap <silent> <Leader>t :terminal<CR>
 
 
 
