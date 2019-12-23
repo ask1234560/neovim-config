@@ -4,7 +4,7 @@ The minimalist feature rich config for neovim
 ## Requirement
 * Linux, win or mac not tested
 * Patched fonts aka powerline fonts
-* True color terminal support https://gist.github.com/XVilka/8346728
+* True color terminal support, check https://gist.github.com/XVilka/8346728
 * Working nvim, :checkhealth for error checking
 
 
@@ -25,7 +25,9 @@ The minimalist feature rich config for neovim
 
 ## Screenshots
 
-
+<img src="screenshots/4.png" width=1000px>
+<img src="screenshots/2.png" width=1000px>
+<img src="screenshots/3.png" width=1000px>
 
 ## Installation
 
@@ -40,6 +42,16 @@ The minimalist feature rich config for neovim
 * open nvim, :PlugInstall for cloning plugins, build __YouCompleteMe__ plugin
 
 
+## Key bindings
+* Leader = ,
+* ,q = :q
+* ,t = :terminal
+* ,m = most recently used files
+* ,o = open file buffers
+* ,p = fuzzy finder in current directory
+* ,c = set local directory to that of current file
+* <c-{h,j,k,l}> = for left, bottom, top, right in split windows
+* ,spacebar = :nohls
 
 
 
