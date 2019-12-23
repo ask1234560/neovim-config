@@ -15,6 +15,9 @@ The minimalist feature rich config for neovim
 * scrooloose/nerdcommenter
 * ctrlpvim/ctrlp.vim
 * lambdalisue/suda.vim
+* terryma/vim-multiple-cursors
+* Valloric/YouCompleteMe
+
 
 ## Installation
 
