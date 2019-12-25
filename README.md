@@ -3,7 +3,7 @@ The minimalist feature rich config for neovim
 
 ## Requirement
 * Linux, win or mac not tested
-* Patched fonts aka powerline fonts
+* Patched fonts aka nerd fonts
 * True color terminal support, check https://gist.github.com/XVilka/8346728
 * Working nvim, :checkhealth for error checking
 
@@ -21,6 +21,8 @@ The minimalist feature rich config for neovim
 * lambdalisue/suda.vim
 * terryma/vim-multiple-cursors
 * Valloric/YouCompleteMe
+* scrooloose/nerdtree
+* ryanoasis/vim-devicons
 
 
 ## Screenshots

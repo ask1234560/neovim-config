@@ -28,6 +28,7 @@ Plug 'lambdalisue/suda.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'Valloric/YouCompleteMe'
 Plug 'scrooloose/nerdtree'
+Plug 'ryanoasis/vim-devicons'
 
 " Initialize plugin system
 call plug#end()
