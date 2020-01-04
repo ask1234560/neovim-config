@@ -2,7 +2,7 @@
 The minimalist feature rich config for neovim
 
 ## Requirement
-* Linux, win or mac not tested
+* Linux; win or mac not tested
 * Patched fonts aka nerd fonts
 * True color terminal support, check https://gist.github.com/XVilka/8346728
 * Working nvim, :checkhealth for error checking
@@ -52,15 +52,15 @@ The minimalist feature rich config for neovim
 
 
 ## Key bindings
-* Leader = ,
-* ,q = :q
-* ,t = :terminal
-* ,m = most recently used files
-* ,o = open file buffers
-* ,p = fuzzy finder in current directory
-* ,c = set local directory to that of current file
-* <c-{h,j,k,l}> = for left, bottom, top, right in split windows
-* ,spacebar = :nohls
+* Leader -> ,
+* ,q -> :q
+* ,t -> :terminal
+* ,m -> most recently used files
+* ,o -> open file buffers
+* ,p -> fuzzy finder in current directory
+* ,c -> set local directory to that of current file
+* <c-{h,j,k,l}> -> for left, bottom, top, right in split windows
+* ,spacebar -> :nohls
 
 
 
