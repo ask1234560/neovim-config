@@ -10,13 +10,14 @@ The minimalist feature rich config for neovim
 
 ## Plugins installed
 
+
 * joshdick/onedark.vim
 * vim-airline/vim-airline
 * tpope/vim-fugitive
 * morhetz/gruvbox
 * frazrepo/vim-rainbow
 * tpope/vim-surround
-* scrooloose/nerdcommenter
+* preservim/nerdcommenter
 * ctrlpvim/ctrlp.vim
 * lambdalisue/suda.vim
 * terryma/vim-multiple-cursors
@@ -24,12 +25,18 @@ The minimalist feature rich config for neovim
 * scrooloose/nerdtree
 * ryanoasis/vim-devicons
 
-
 ## Screenshots
 
+<img src="screenshots/1.png" width=1000px>
 <img src="screenshots/4.png" width=1000px>
 <img src="screenshots/2.png" width=1000px>
 <img src="screenshots/3.png" width=1000px>
+
+### After devicons
+
+<img src="screenshots/5.png" width=1000px>
+<img src="screenshots/6.png" width=1000px>
+<img src="screenshots/7.png" width=1000px>
 
 ## Installation
 

@@ -22,7 +22,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'morhetz/gruvbox'
 Plug 'frazrepo/vim-rainbow'
 Plug 'tpope/vim-surround'
-Plug 'scrooloose/nerdcommenter'
+Plug 'preservim/nerdcommenter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'lambdalisue/suda.vim'
 Plug 'terryma/vim-multiple-cursors'
@@ -60,7 +60,7 @@ nnoremap <silent> <Leader><space> :nohlsearch<CR>
 nnoremap <silent> <Leader>o :CtrlPBuffer<CR>
 nnoremap <silent> <Leader>m :CtrlPMRU<CR>
 nnoremap <silent> <Leader>p :CtrlP<CR>
-let g:ctrlp_working_path_mode = 'c'
+let g:ctrlp_working_path_mode = 'a'
 let g:ctrlp_user_command = "find %s -maxdepth 4 -not -path '*.git/*' -type f"
 
 " change directory according to fie
