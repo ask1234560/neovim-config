@@ -66,6 +66,7 @@ let g:ctrlp_user_command = "find %s -maxdepth 4 -not -path '*.git/*' -type f"
 " change directory according to fie
 nmap <Leader>c :lcd %:p:h<CR>
 
+" YCM configs
 let g:ycm_global_ycm_extra_conf = '~/.config/nvim/plugged/YouCompleteMe/.ycm_extra_conf.py'
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
@@ -81,4 +82,10 @@ let g:NERDTreeShowLineNumbers=1
 let NERDTreeShowHidden=1
 let NERDTreeMinimalUI = 1
 
+" nerdcommenter configs
+let g:NERDSpaceDelims = 1
+let g:NERDDefaultAlign = 'left'
+let g:NERDCommentEmptyLines = 1
+ 
+ 
 
