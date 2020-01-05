@@ -11,19 +11,19 @@ The minimalist feature rich config for neovim
 ## Plugins installed
 
 
-* joshdick/onedark.vim
-* vim-airline/vim-airline
-* tpope/vim-fugitive
-* morhetz/gruvbox
-* frazrepo/vim-rainbow
-* tpope/vim-surround
-* preservim/nerdcommenter
-* ctrlpvim/ctrlp.vim
-* lambdalisue/suda.vim
-* terryma/vim-multiple-cursors
-* Valloric/YouCompleteMe
-* scrooloose/nerdtree
-* ryanoasis/vim-devicons
+* [Named Link](http://www.github.com/joshdick/onedark.vim "joshdick/onedark.vim")
+* [Named Link](http://www.github.com/vim-airline/vim-airline "vim-airline/vim-airline")
+* [Named Link](http://www.github.com/tpope/vim-fugitive "tpope/vim-fugitive")
+* [Named Link](http://www.github.com/morhetz/gruvbox "morhetz/gruvbox")
+* [Named Link](http://www.github.com/frazrepo/vim-rainbow "frazrepo/vim-rainbow")
+* [Named Link](http://www.github.com/tpope/vim-surround "tpope/vim-surround")
+* [Named Link](http://www.github.com/preservim/nerdcommenter "preservim/nerdcommenter")
+* [Named Link](http://www.github.com/ctrlpvim/ctrlp.vim "ctrlpvim/ctrlp.vim")
+* [Named Link](http://www.github.com/lambdalisue/suda.vim "lambdalisue/suda.vim")
+* [Named Link](http://www.github.com/terryma/vim-multiple-cursors "terryma/vim-multiple-cursors")
+* [Named Link](http://www.github.com/Valloric/YouCompleteMe "Valloric/YouCompleteMe")
+* [Named Link](http://www.github.com/scrooloose/nerdtree "scrooloose/nerdtree")
+* [Named Link](http://www.github.com/ryanoasis/vim-devicons "ryanoasis/vim-devicons")
 
 ## Screenshots
 
@@ -32,7 +32,7 @@ The minimalist feature rich config for neovim
 <img src="screenshots/2.png" width=1000px>
 <img src="screenshots/3.png" width=1000px>
 
-### After devicons
+#### After devicons
 
 <img src="screenshots/5.png" width=1000px>
 <img src="screenshots/6.png" width=1000px>
