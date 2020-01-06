@@ -29,6 +29,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'Valloric/YouCompleteMe'
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
+Plug 'jiangmiao/auto-pairs'
 
 " Initialize plugin system
 call plug#end()

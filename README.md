@@ -24,6 +24,7 @@ The minimalist feature rich config for neovim
 * [Valloric/YouCompleteMe](http://www.github.com/Valloric/YouCompleteMe)
 * [scrooloose/nerdtree](http://www.github.com/scrooloose/nerdtree)
 * [ryanoasis/vim-devicons](http://www.github.com/ryanoasis/vim-devicons)
+* [jiangmiao/auto-pairs](http://www.github.com/jiangmiao/auto-pairs)
 
 ## Screenshots
 
