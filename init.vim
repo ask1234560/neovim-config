@@ -30,6 +30,8 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'jiangmiao/auto-pairs'
+Plug 'mattn/emmet-vim'
+
 
 " Initialize plugin system
 call plug#end()
@@ -88,5 +90,7 @@ let g:NERDSpaceDelims = 1
 let g:NERDDefaultAlign = 'left'
 let g:NERDCommentEmptyLines = 1
  
- 
+" html 
+" autocmd BufNewFile *.html 0r ~/.config/nvim/templates/html.skel
+
 
