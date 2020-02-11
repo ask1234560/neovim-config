@@ -37,6 +37,8 @@ Plug 'luochen1990/rainbow'
 " Initialize plugin system
 call plug#end()
 
+set inccommand=split
+
 
 syntax on
 " colorscheme onedark
@@ -77,9 +79,12 @@ let g:ycm_global_ycm_extra_conf = '~/.config/nvim/plugged/YouCompleteMe/.ycm_ext
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 
-" :q :terminal key binding
+" key binding
 nmap <silent> <Leader>q :q<CR>
 nmap <silent> <Leader>t :terminal<CR>
+nmap <silent> <Leader>w :w<CR>
+nmap <silent> <Leader>k :4wincmd <<CR>
+nmap <silent> <Leader>j :4wincmd ><CR>
 
 " NERDTree config
 map <Leader>n :NERDTreeToggle<CR>
