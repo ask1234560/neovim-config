@@ -6,6 +6,8 @@
 set number
 set relativenumber
 set termguicolors
+set autoread
+au FocusGained * :checktime
 let mapleader = ","
 
 " Specify a directory for plugins
@@ -83,8 +85,8 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 nmap <silent> <Leader>q :q<CR>
 nmap <silent> <Leader>t :terminal<CR>
 nmap <silent> <Leader>w :w<CR>
-nmap <silent> <Leader>k :4wincmd <<CR>
-nmap <silent> <Leader>j :4wincmd ><CR>
+nnoremap <silent> <Leader>j :wincmd <<CR>
+nnoremap <silent> <Leader>k :wincmd ><CR>
 
 " NERDTree config
 map <Leader>n :NERDTreeToggle<CR>
