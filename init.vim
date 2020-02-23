@@ -34,6 +34,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
 Plug 'luochen1990/rainbow'
+Plug 'unblevable/quick-scope'
 
 
 " Initialize plugin system
@@ -103,4 +104,11 @@ let g:NERDCommentEmptyLines = 1
 " html 
 " autocmd BufNewFile *.html 0r ~/.config/nvim/templates/html.skel
 
+" quick-scope
+let g:qs_max_chars=1000
+" Move across wrapped lines like regular lines
+noremap 0 ^
+noremap ^ 0
+highlight QuickScopePrimary gui=underline cterm=underline
+highlight QuickScopeSecondary gui=undercurl cterm=undercurl
 
