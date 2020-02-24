@@ -15,7 +15,6 @@ The minimalist feature rich config for neovim
 * [vim-airline/vim-airline](http://www.github.com/vim-airline/vim-airline)
 * [tpope/vim-fugitive](http://www.github.com/tpope/vim-fugitive)
 * [morhetz/gruvbox](http://www.github.com/morhetz/gruvbox)
-* [frazrepo/vim-rainbow](http://www.github.com/frazrepo/vim-rainbow)
 * [tpope/vim-surround](http://www.github.com/tpope/vim-surround)
 * [preservim/nerdcommenter](http://www.github.com/preservim/nerdcommenter)
 * [ctrlpvim/ctrlp.vim](http://www.github.com/ctrlpvim/ctrlp.vim)
@@ -25,6 +24,9 @@ The minimalist feature rich config for neovim
 * [scrooloose/nerdtree](http://www.github.com/scrooloose/nerdtree)
 * [ryanoasis/vim-devicons](http://www.github.com/ryanoasis/vim-devicons)
 * [jiangmiao/auto-pairs](http://www.github.com/jiangmiao/auto-pairs)
+* [mattn/emmet-vim](http://www.github.com/mattn/emmet-vim)
+* [luochen1990/rainbow](http://www.github.com/luochen1990/rainbow)
+* [unblevable/quick-scope](http://www.github.com/unblevable/quick-scope)
 
 ## Screenshots
 
@@ -62,6 +64,6 @@ The minimalist feature rich config for neovim
 * ,c => set local directory to that of current file
 * <c-{h,j,k,l}> => for left, bottom, top, right in split windows
 * ,spacebar => :nohls
-
+* 0 and ^ keybinds are interchanged
 
 
