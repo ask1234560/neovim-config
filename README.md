@@ -43,7 +43,11 @@ The minimalist feature rich config for neovim
 
 ## Installation
 
-
+* install nvim
+	* Debian 
+		* sudo apt install neovim
+	* Arch
+		* sudo pacman -S neovim
 * mkdir -p ~/.config
 * cd ~/.config
 * mv nvim nvim_bak 2>/dev/null
