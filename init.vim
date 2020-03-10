@@ -111,4 +111,3 @@ noremap 0 ^
 noremap ^ 0
 highlight QuickScopePrimary gui=underline cterm=underline
 highlight QuickScopeSecondary gui=undercurl cterm=undercurl
-
