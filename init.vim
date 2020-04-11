@@ -19,15 +19,12 @@ call plug#begin('~/.config/nvim/plugged')
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plug 'joshdick/onedark.vim'
 Plug 'vim-airline/vim-airline'
-" Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'morhetz/gruvbox'
-" Plug 'frazrepo/vim-rainbow'
 Plug 'tpope/vim-surround'
 Plug 'preservim/nerdcommenter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'lambdalisue/suda.vim'
-Plug 'terryma/vim-multiple-cursors'
 Plug 'Valloric/YouCompleteMe'
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
@@ -35,6 +32,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
 Plug 'luochen1990/rainbow'
 Plug 'unblevable/quick-scope'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 
 " Initialize plugin system
@@ -44,9 +42,8 @@ set inccommand=split
 
 
 syntax on
-" colorscheme onedark
-colorscheme gruvbox
-let g:airline_theme = 'onedark'
+colorscheme dracula
+" let g:airline_theme = 'onedark'
 
 let g:airline_powerline_fonts = 1
 
@@ -111,3 +108,8 @@ noremap 0 ^
 noremap ^ 0
 highlight QuickScopePrimary gui=underline cterm=underline
 highlight QuickScopeSecondary gui=undercurl cterm=undercurl
+
+" set tab to 4
+set tabstop=4
+
+

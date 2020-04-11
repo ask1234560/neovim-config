@@ -27,6 +27,7 @@ The minimalist feature rich config for neovim
 * [mattn/emmet-vim](http://www.github.com/mattn/emmet-vim)
 * [luochen1990/rainbow](http://www.github.com/luochen1990/rainbow)
 * [unblevable/quick-scope](http://www.github.com/unblevable/quick-scope)
+* [dracula/vim](http://www.github.com/dracula/vim)
 
 ## Screenshots
 
