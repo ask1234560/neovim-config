@@ -5,7 +5,7 @@
 
 set number
 set relativenumber
-set termguicolors
+" set termguicolors
 set autoread
 au FocusGained * :checktime
 let mapleader = ","
@@ -27,12 +27,12 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'lambdalisue/suda.vim'
 Plug 'Valloric/YouCompleteMe'
 Plug 'scrooloose/nerdtree'
-Plug 'ryanoasis/vim-devicons'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
 Plug 'luochen1990/rainbow'
 Plug 'unblevable/quick-scope'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'ryanoasis/vim-devicons'
 
 
 " Initialize plugin system
@@ -106,8 +106,8 @@ let g:qs_max_chars=1000
 " Move across wrapped lines like regular lines
 noremap 0 ^
 noremap ^ 0
-highlight QuickScopePrimary gui=underline cterm=underline
-highlight QuickScopeSecondary gui=undercurl cterm=undercurl
+highlight QuickScopePrimary guifg='#afff5f' gui=underline  ctermfg=155 cterm=underline
+highlight QuickScopeSecondary guifg='#5fffff' gui=undercurl ctermfg=81 cterm=undercurl
 
 " set tab to 4
 set tabstop=4
