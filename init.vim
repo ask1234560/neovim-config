@@ -112,4 +112,3 @@ highlight QuickScopeSecondary guifg='#5fffff' gui=undercurl ctermfg=81 cterm=und
 " set tab to 4
 set tabstop=4
 
-

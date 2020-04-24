@@ -19,15 +19,16 @@ The minimalist feature rich config for neovim
 * [preservim/nerdcommenter](http://www.github.com/preservim/nerdcommenter)
 * [ctrlpvim/ctrlp.vim](http://www.github.com/ctrlpvim/ctrlp.vim)
 * [lambdalisue/suda.vim](http://www.github.com/lambdalisue/suda.vim)
-* [terryma/vim-multiple-cursors](http://www.github.com/terryma/vim-multiple-cursors)
 * [Valloric/YouCompleteMe](http://www.github.com/Valloric/YouCompleteMe)
 * [scrooloose/nerdtree](http://www.github.com/scrooloose/nerdtree)
-* [ryanoasis/vim-devicons](http://www.github.com/ryanoasis/vim-devicons)
 * [jiangmiao/auto-pairs](http://www.github.com/jiangmiao/auto-pairs)
 * [mattn/emmet-vim](http://www.github.com/mattn/emmet-vim)
 * [luochen1990/rainbow](http://www.github.com/luochen1990/rainbow)
 * [unblevable/quick-scope](http://www.github.com/unblevable/quick-scope)
 * [dracula/vim](http://www.github.com/dracula/vim)
+* [ryanoasis/vim-devicons](http://www.github.com/ryanoasis/vim-devicons)
+
+
 
 ## Screenshots
 
