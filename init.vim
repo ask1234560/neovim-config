@@ -83,8 +83,8 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 nmap <silent> <Leader>q :q<CR>
 nmap <silent> <Leader>t :terminal<CR>
 nmap <silent> <Leader>w :w<CR>
-nnoremap <silent> <Leader>j :wincmd <<CR>
-nnoremap <silent> <Leader>k :wincmd ><CR>
+" nnoremap <silent> <Leader>j :wincmd <<CR>
+" nnoremap <silent> <Leader>k :wincmd ><CR>
 
 " NERDTree config
 map <Leader>n :NERDTreeToggle<CR>
