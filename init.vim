@@ -33,6 +33,8 @@ Plug 'luochen1990/rainbow'
 Plug 'unblevable/quick-scope'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'ryanoasis/vim-devicons'
+Plug 'altercation/vim-colors-solarized'
+Plug 'vim-airline/vim-airline-themes'
 
 
 " Initialize plugin system
@@ -42,8 +44,9 @@ set inccommand=split
 
 
 syntax on
-colorscheme dracula
-" let g:airline_theme = 'onedark'
+set background=dark
+colorscheme solarized
+let g:airline_theme = 'solarized'
 
 let g:airline_powerline_fonts = 1
 
