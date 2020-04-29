@@ -4,7 +4,7 @@ The minimalist feature rich config for neovim
 ## Requirement
 * Linux; win or mac not tested
 * Patched fonts aka nerd fonts
-* True color terminal support, check https://gist.github.com/XVilka/8346728
+* True color terminal support, [check here](https://gist.github.com/XVilka/8346728)
 * Working nvim, :checkhealth for error checking
 
 
@@ -36,7 +36,7 @@ The minimalist feature rich config for neovim
 <img src="Screenshots/Screenshot_from_2020-04-27_19:29:44.png" width=1000px>
 
 ## Installation
-
+```
 * install nvim
 	* Debian 
 		* sudo apt install neovim
@@ -50,7 +50,7 @@ The minimalist feature rich config for neovim
 * curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     
 * open nvim, :PlugInstall for cloning plugins, build __YouCompleteMe__ plugin
-
+```
 
 ## Key bindings
 * Leader => ,
