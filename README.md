@@ -46,9 +46,7 @@ The minimalist feature rich config for neovim
 * cd ~/.config
 * mv nvim nvim_bak 2>/dev/null
 * git clone https://github.com/ask1234560/neovim-config.git nvim
-
 * curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    
 * open nvim, :PlugInstall for cloning plugins, build YouCompleteMe plugin
 ```
 
