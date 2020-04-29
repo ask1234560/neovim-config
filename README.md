@@ -25,23 +25,15 @@ The minimalist feature rich config for neovim
 * [mattn/emmet-vim](http://www.github.com/mattn/emmet-vim)
 * [luochen1990/rainbow](http://www.github.com/luochen1990/rainbow)
 * [unblevable/quick-scope](http://www.github.com/unblevable/quick-scope)
-* [dracula/vim](http://www.github.com/dracula/vim)
+* [dracula/vim', { 'as': 'dracula' ](http://www.github.com/dracula/vim',) { 'as': 'dracula' 
 * [ryanoasis/vim-devicons](http://www.github.com/ryanoasis/vim-devicons)
-
+* [altercation/vim-colors-solarized](http://www.github.com/altercation/vim-colors-solarized)
+* [vim-airline/vim-airline-themes](http://www.github.com/vim-airline/vim-airline-themes)
 
 
 ## Screenshots
 
-<img src="screenshots/1.png" width=1000px>
-<img src="screenshots/4.png" width=1000px>
-<img src="screenshots/2.png" width=1000px>
-<img src="screenshots/3.png" width=1000px>
-
-#### After devicons
-
-<img src="screenshots/5.png" width=1000px>
-<img src="screenshots/6.png" width=1000px>
-<img src="screenshots/7.png" width=1000px>
+<img src="Screenshots/Screenshot_from_2020-04-27_19:29:44.png" width=1000px>
 
 ## Installation
 
