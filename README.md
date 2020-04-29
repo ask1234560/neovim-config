@@ -5,7 +5,7 @@ The minimalist feature rich config for neovim
 * Linux; win or mac not tested
 * Patched fonts aka nerd fonts
 * True color terminal support, [check here](https://gist.github.com/XVilka/8346728)
-* Working nvim, :checkhealth for error checking
+* Working nvim, `:checkhealth` for error checking
 
 
 ## Plugins installed
@@ -49,7 +49,7 @@ The minimalist feature rich config for neovim
 
 * curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     
-* open nvim, :PlugInstall for cloning plugins, build __YouCompleteMe__ plugin
+* open nvim, :PlugInstall for cloning plugins, build YouCompleteMe plugin
 ```
 
 ## Key bindings
