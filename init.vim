@@ -32,16 +32,16 @@ Plug 'mattn/emmet-vim'
 Plug 'luochen1990/rainbow'
 Plug 'unblevable/quick-scope'
 Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'ryanoasis/vim-devicons'
 Plug 'altercation/vim-colors-solarized'
 Plug 'vim-airline/vim-airline-themes'
+" always load at end
+Plug 'ryanoasis/vim-devicons'
 
 
 " Initialize plugin system
 call plug#end()
 
 set inccommand=split
-
 
 syntax on
 set background=dark
