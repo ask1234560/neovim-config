@@ -116,4 +116,4 @@ highlight QuickScopeSecondary guifg='#5fffff' gui=undercurl ctermfg=81 cterm=und
 set tabstop=4
 
 " nvim shell behave like command prompt
-set shellcmdflag=-ic
+" set shellcmdflag=-ic
