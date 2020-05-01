@@ -43,7 +43,7 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'altercation/vim-colors-solarized'
 Plug 'vim-airline/vim-airline-themes'
 " always load at end
-Plug 'ryanoasis/vim-devicons'
+Plug 'ryanoasis/vim-devicons' , { 'commit': 'ed7aee3de' }
 " Initialize plugin system
 call plug#end()
 
@@ -79,7 +79,7 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 
 
-" key bindings
+" keybindings
 nmap <silent> <Leader>q :q<CR>
 nmap <silent> <Leader>t :terminal<CR>
 nmap <silent> <Leader>w :w<CR>
