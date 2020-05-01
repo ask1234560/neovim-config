@@ -33,7 +33,7 @@ The minimalist feature rich config for neovim
 
 ## Screenshots
 
-<img src="Screenshots/Screenshot_from_2020-05-01_10:41:49.png" width=1000px>
+<img src="Screenshots/Screenshot_from_2020-05-01_12:06:45.png" width=1000px>
 
 ## Installation
 ```
