@@ -26,14 +26,14 @@ The minimalist feature rich config for neovim
 * [luochen1990/rainbow](http://www.github.com/luochen1990/rainbow)
 * [unblevable/quick-scope](http://www.github.com/unblevable/quick-scope)
 * [dracula/vim](http://www.github.com/dracula/vim)
-* [ryanoasis/vim-devicons](http://www.github.com/ryanoasis/vim-devicons)
 * [altercation/vim-colors-solarized](http://www.github.com/altercation/vim-colors-solarized)
 * [vim-airline/vim-airline-themes](http://www.github.com/vim-airline/vim-airline-themes)
+* [ryanoasis/vim-devicons](http://www.github.com/ryanoasis/vim-devicons)
 
 
 ## Screenshots
 
-<img src="Screenshots/Screenshot_from_2020-04-27_19:29:44.png" width=1000px>
+<img src="Screenshots/Screenshot_from_2020-05-01_10:41:49.png" width=1000px>
 
 ## Installation
 ```
