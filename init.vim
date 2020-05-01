@@ -88,6 +88,9 @@ nmap <Leader>c :lcd %:p:h<CR>
 " 0 first char/^ beg of line
 noremap 0 ^
 noremap ^ 0
+" buffer next/prev
+nmap <silent> <Leader>l :bn<CR>
+nmap <silent> <Leader>h :bp<CR>
 " inc/dec vert split
 " nnoremap <silent> <Leader>j :wincmd <<CR>
 " nnoremap <silent> <Leader>k :wincmd ><CR>
