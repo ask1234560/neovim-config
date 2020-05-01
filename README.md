@@ -51,6 +51,7 @@ The minimalist feature rich config for neovim
 ```
 
 ## Key bindings
+```
 * Leader => ,
 * ,q => :q
 * ,t => :terminal
@@ -62,4 +63,4 @@ The minimalist feature rich config for neovim
 * ,spacebar => :nohls
 * 0 and ^ keybinds are interchanged
 * ,l/,h => buffer next/buffer prev
-
+```
