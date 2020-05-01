@@ -46,9 +46,11 @@ set inccommand=split
 syntax on
 set background=dark
 colorscheme solarized
-let g:airline_theme = 'solarized'
 
+" airline
+let g:airline_theme = 'solarized'
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 
 filetype plugin on
 
