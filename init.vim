@@ -79,7 +79,7 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 
 
-" key bindings
+" keybindings
 nmap <silent> <Leader>q :q<CR>
 nmap <silent> <Leader>t :terminal<CR>
 nmap <silent> <Leader>w :w<CR>
