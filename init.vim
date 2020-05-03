@@ -42,7 +42,7 @@ Plug 'unblevable/quick-scope'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'altercation/vim-colors-solarized'
 Plug 'vim-airline/vim-airline-themes'
-" always load at end
+" always load at end, fixed at commit to avoid bracket issue
 Plug 'ryanoasis/vim-devicons' , { 'commit': 'ed7aee3de' }
 " Initialize plugin system
 call plug#end()
@@ -55,28 +55,6 @@ colorscheme solarized
 filetype plugin on
 " transparency
 hi Normal guibg=NONE ctermbg=NONE
-
-
-" airline
-let g:airline_theme = 'solarized'
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-
-
-" rainbow 
-let g:rainbow_active = 1
-" let g:rainbow_conf = {'guifgs' : ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick'], 'ctermfgs' : ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']}	
-
-
-" ctrlp
-let g:ctrlp_working_path_mode = 'a'
-let g:ctrlp_user_command = "find %s -maxdepth 4 -not -path '*.git/*' -type f"
-
-
-" YCM 
-let g:ycm_global_ycm_extra_conf = '~/.config/nvim/plugged/YouCompleteMe/.ycm_extra_conf.py'
-let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_autoclose_preview_window_after_completion = 1
 
 
 " keybindings
@@ -107,6 +85,28 @@ nnoremap <silent> <Leader>m :CtrlPMRU<CR>
 nnoremap <silent> <Leader>p :CtrlP<CR>
 " NERDTree
 map <Leader>n :NERDTreeToggle<CR>
+
+
+" airline
+let g:airline_theme = 'solarized'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+
+
+" rainbow 
+let g:rainbow_active = 1
+" let g:rainbow_conf = {'guifgs' : ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick'], 'ctermfgs' : ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']}	
+
+
+" ctrlp
+let g:ctrlp_working_path_mode = 'a'
+let g:ctrlp_user_command = "find %s -maxdepth 4 -not -path '*.git/*' -type f"
+
+
+" YCM 
+let g:ycm_global_ycm_extra_conf = '~/.config/nvim/plugged/YouCompleteMe/.ycm_extra_conf.py'
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
 
 
 " NERDTree
