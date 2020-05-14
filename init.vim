@@ -49,7 +49,7 @@ call plug#end()
 
 
 " colorscheme
-syntax on
+syntax enable
 set background=dark
 colorscheme solarized
 filetype plugin on
@@ -123,6 +123,6 @@ let g:NERDCommentEmptyLines = 1
 
 
 " quick-scope
-let g:qs_max_chars=1000
-highlight QuickScopePrimary guifg='#afff5f' gui=underline  ctermfg=155 cterm=underline
-highlight QuickScopeSecondary guifg='#5fffff' gui=undercurl ctermfg=81 cterm=undercurl
+let g:qs_max_chars=120
+highlight QuickScopePrimary guifg='#afff5f' gui=underline  ctermfg=37 cterm=underline
+highlight QuickScopeSecondary guifg='#5fffff' gui=undercurl ctermfg=245 cterm=underline
