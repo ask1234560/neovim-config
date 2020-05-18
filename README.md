@@ -9,8 +9,6 @@ The minimalist feature rich config for neovim
 
 
 ## Plugins installed
-
-
 * [joshdick/onedark.vim](http://www.github.com/joshdick/onedark.vim)
 * [vim-airline/vim-airline](http://www.github.com/vim-airline/vim-airline)
 * [tpope/vim-fugitive](http://www.github.com/tpope/vim-fugitive)
@@ -23,14 +21,13 @@ The minimalist feature rich config for neovim
 * [scrooloose/nerdtree](http://www.github.com/scrooloose/nerdtree)
 * [jiangmiao/auto-pairs](http://www.github.com/jiangmiao/auto-pairs)
 * [mattn/emmet-vim](http://www.github.com/mattn/emmet-vim)
-* [luochen1990/rainbow](http://www.github.com/luochen1990/rainbow)
 * [unblevable/quick-scope](http://www.github.com/unblevable/quick-scope)
 * [dracula/vim](http://www.github.com/dracula/vim)
 * [altercation/vim-colors-solarized](http://www.github.com/altercation/vim-colors-solarized)
 * [vim-airline/vim-airline-themes](http://www.github.com/vim-airline/vim-airline-themes)
 * [ryanoasis/vim-devicons](http://www.github.com/ryanoasis/vim-devicons)
 
-
+<!-- macro {y$I* Wv$hS]$a(http://www.github.com/pj0} -->
 ## Screenshots
 
 <img src="Screenshots/Screenshot_from_2020-05-01_12:06:45.png" width=1000px>
@@ -47,7 +44,7 @@ The minimalist feature rich config for neovim
 * mv nvim nvim_bak 2>/dev/null
 * git clone https://github.com/ask1234560/neovim-config.git nvim
 * curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-* open nvim, :PlugInstall for cloning plugins, build YouCompleteMe plugin
+* open nvim, :PlugInstall for installing plugins, build YouCompleteMe plugin
 ```
 
 ## Key bindings
