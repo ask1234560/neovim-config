@@ -61,17 +61,13 @@ hi Normal guibg=NONE ctermbg=NONE
 nmap <silent> <Leader>q :q<CR>
 nmap <silent> <Leader>t :terminal<CR>
 nmap <silent> <Leader>w :w<CR>
-" change directory according to fie
-nmap <Leader>c :lcd %:p:h<CR>
 " 0 first char/^ beg of line
 noremap 0 ^
 noremap ^ 0
-" buffer next/prev
+" buffer next/prev/delete
 nmap <silent> <Leader>l :bn<CR>
 nmap <silent> <Leader>h :bp<CR>
-" inc/dec vert split
-" nnoremap <silent> <Leader>j :wincmd <<CR>
-" nnoremap <silent> <Leader>k :wincmd ><CR>
+nmap <silent> <Leader>d :bd<CR>
 " Use ctrl-[hjkl] to select the active split!
 nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>
@@ -84,7 +80,9 @@ nnoremap <silent> <Leader>o :CtrlPBuffer<CR>
 nnoremap <silent> <Leader>m :CtrlPMRU<CR>
 nnoremap <silent> <Leader>p :CtrlP<CR>
 " NERDTree
-map <Leader>n :NERDTreeToggle<CR>
+map <silent> <Leader>n :NERDTreeToggle<CR>
+" navigate to file
+nmap <silent> <Leader>c :NERDTreeFind<CR>
 
 
 " airline
@@ -114,6 +112,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 let g:NERDTreeShowLineNumbers=1
 let NERDTreeShowHidden=1
 let NERDTreeMinimalUI = 1
+let g:NERDTreeDirArrowExpandable = ''
+let g:NERDTreeDirArrowCollapsible = ''
 
 
 " nerdcommenter 
