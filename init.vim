@@ -5,8 +5,8 @@ set relativenumber
 set autoread
 au FocusGained * :checktime
 let mapleader = ","
-" set tab to 4
-set tabstop=4
+" set tab to 4/ctrl-v<tab> to insert tab
+set tabstop=4 shiftwidth=4 expandtab
 set inccommand=split
 " html skeleton
 " autocmd BufNewFile *.html 0r ~/.config/nvim/templates/html.skel
