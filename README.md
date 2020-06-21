@@ -9,20 +9,20 @@ The minimalist feature rich config for neovim
 
 
 ## Plugins installed
-* [Plug 'altercation/vim-colors-solarized'](http://www.github.com/Plug 'altercation/vim-colors-solarized')
-* [Plug 'ask1234560/vim-devicons'](http://www.github.com/Plug 'ask1234560/vim-devicons')
-* [Plug 'ctrlpvim/ctrlp.vim'](http://www.github.com/Plug 'ctrlpvim/ctrlp.vim')
-* [Plug 'jiangmiao/auto-pairs'](http://www.github.com/Plug 'jiangmiao/auto-pairs')
-* [Plug 'lambdalisue/suda.vim'](http://www.github.com/Plug 'lambdalisue/suda.vim')
-* [Plug 'mattn/emmet-vim'](http://www.github.com/Plug 'mattn/emmet-vim')
-* [Plug 'preservim/nerdcommenter'](http://www.github.com/Plug 'preservim/nerdcommenter')
-* [Plug 'scrooloose/nerdtree'](http://www.github.com/Plug 'scrooloose/nerdtree')
-* [Plug 'tpope/vim-fugitive'](http://www.github.com/Plug 'tpope/vim-fugitive')
-* [Plug 'tpope/vim-surround'](http://www.github.com/Plug 'tpope/vim-surround')
-* [Plug 'unblevable/quick-scope'](http://www.github.com/Plug 'unblevable/quick-scope')
-* [Plug 'Valloric/YouCompleteMe'](http://www.github.com/Plug 'Valloric/YouCompleteMe')
-* [Plug 'vim-airline/vim-airline'](http://www.github.com/Plug 'vim-airline/vim-airline')
-* [Plug 'vim-airline/vim-airline-themes'](http://www.github.com/Plug 'vim-airline/vim-airline-themes')
+* [altercation/vim-colors-solarized](http://www.github.com/altercation/vim-colors-solarized)
+* [ask1234560/vim-devicons](http://www.github.com/ask1234560/vim-devicons)
+* [ctrlpvim/ctrlp.vim](http://www.github.com/ctrlpvim/ctrlp.vim)
+* [jiangmiao/auto-pairs](http://www.github.com/jiangmiao/auto-pairs)
+* [lambdalisue/suda.vim](http://www.github.com/lambdalisue/suda.vim)
+* [mattn/emmet-vim](http://www.github.com/mattn/emmet-vim)
+* [preservim/nerdcommenter](http://www.github.com/preservim/nerdcommenter)
+* [scrooloose/nerdtree](http://www.github.com/scrooloose/nerdtree)
+* [tpope/vim-fugitive](http://www.github.com/tpope/vim-fugitive)
+* [tpope/vim-surround](http://www.github.com/tpope/vim-surround)
+* [unblevable/quick-scope](http://www.github.com/unblevable/quick-scope)
+* [Valloric/YouCompleteMe](http://www.github.com/Valloric/YouCompleteMe)
+* [vim-airline/vim-airline](http://www.github.com/vim-airline/vim-airline)
+* [vim-airline/vim-airline-themes](http://www.github.com/vim-airline/vim-airline-themes)
 
 <!-- macro {y$I* Wv$hS]$a(http://www.github.com/pj0} -->
 ## Screenshots
