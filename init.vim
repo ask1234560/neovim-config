@@ -19,26 +19,21 @@ set inccommand=split
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.config/nvim/plugged')
 " Make sure you use single quotes
-" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
-Plug 'joshdick/onedark.vim'
-Plug 'vim-airline/vim-airline'
-Plug 'tpope/vim-fugitive'
-Plug 'morhetz/gruvbox'
-Plug 'tpope/vim-surround'
-Plug 'preservim/nerdcommenter'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'lambdalisue/suda.vim'
-Plug 'Valloric/YouCompleteMe'
-Plug 'scrooloose/nerdtree'
-Plug 'jiangmiao/auto-pairs'
-Plug 'mattn/emmet-vim'
 " Plug 'luochen1990/rainbow'
-Plug 'unblevable/quick-scope'
-Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'altercation/vim-colors-solarized'
+Plug 'ask1234560/vim-devicons'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'lambdalisue/suda.vim'
+Plug 'mattn/emmet-vim'
+Plug 'preservim/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'unblevable/quick-scope'
+Plug 'Valloric/YouCompleteMe'
+Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-" always load at end, fixed at commit to avoid bracket issue
-Plug 'ryanoasis/vim-devicons' , { 'commit': 'ed7aee3de' }
 " Initialize plugin system
 call plug#end()
 
@@ -67,6 +62,9 @@ noremap ^ 0
 nmap <silent> <Leader>l :bn<CR>
 nmap <silent> <Leader>h :bp<CR>
 nmap <silent> <Leader>d :bd<CR>
+" split horizontal/vertical
+nmap <silent> <Leader>hs :new<CR>
+nmap <silent> <Leader>vs :vnew<CR>
 " Use ctrl-[hjkl] to select the active split!
 nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>
