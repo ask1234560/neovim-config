@@ -82,7 +82,7 @@ nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
 " scratchpad
-nmap <silent> gs :call Scratchpad_buffer()<CR>
+nmap <silent> gs :setlocal buftype=nofile bufhidden=hide noswapfile<CR>
 
 
 " airline
@@ -120,15 +120,6 @@ highlight QuickScopeSecondary guifg='#5fffff' gui=undercurl ctermfg=245 cterm=un
 " rainbow 
 let g:rainbow_active = 1
 " let g:rainbow_conf = {'guifgs' : ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick'], 'ctermfgs' : ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']}	
-
-
-" scratchpad
-function! Scratchpad_buffer()
-    :e scratch
-    :setlocal buftype=nofile
-    :setlocal bufhidden=hide
-    :setlocal noswapfile
-endfunction
 
 
 " YCM 
