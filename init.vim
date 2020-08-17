@@ -53,7 +53,7 @@ nmap <silent> <Leader>q :q<CR>
 nmap <silent> <Leader>t :terminal<CR>
 nmap <silent> <Leader>w :w<CR>
 " case insensitive
-nmap <silent> <Leader>i :set ic!<CR>
+nmap <Leader>i :set ic!<CR>:set ic?<CR>
 " spell checker
 nmap <silent> <Leader>s :setlocal spell! spelllang=en_us<CR>
 " buffer next/prev/delete
