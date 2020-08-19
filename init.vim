@@ -122,6 +122,10 @@ let g:rainbow_active = 1
 " let g:rainbow_conf = {'guifgs' : ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick'], 'ctermfgs' : ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']}	
 
 
+" suda
+let g:suda_smart_edit = 1
+
+
 " YCM 
 let g:ycm_global_ycm_extra_conf = '~/.config/nvim/plugged/YouCompleteMe/.ycm_extra_conf.py'
 let g:ycm_autoclose_preview_window_after_insertion = 1
