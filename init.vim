@@ -1,7 +1,6 @@
 " general
 set number
 set relativenumber
-" set termguicolors
 set autoread
 au FocusGained * :checktime
 let mapleader = ","
@@ -15,13 +14,10 @@ set clipboard+=unnamedplus
 " set shellcmdflag=-ic
 
 
-" Specify a directory for plugins
-" - For Neovim: stdpath('data') . '/plugged'
-" - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.config/nvim/plugged')
 " Make sure you use single quotes
 " Plug 'luochen1990/rainbow'
-Plug 'altercation/vim-colors-solarized'
+Plug 'overcache/NeoSolarized'
 Plug 'ask1234560/vim-devicons'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jiangmiao/auto-pairs'
@@ -40,9 +36,31 @@ call plug#end()
 
 
 " colorscheme
+set termguicolors
 syntax enable
+" Default value is "normal", Setting this option to "high" or "low" does use the
+" same Solarized palette but simply shifts some values up or down in order to
+" expand or compress the tonal range displayed.
+let g:neosolarized_contrast = "normal"
+" Special characters such as trailing whitespace, tabs, newlines, when displayed
+" using ":set list" can be set to one of three levels depending on your needs.
+" Default value is "normal". Provide "high" and "low" options.
+let g:neosolarized_visibility = "normal"
+" I make vertSplitBar a transparent background color. If you like the origin
+" solarized vertSplitBar style more, set this value to 0.
+let g:neosolarized_vertSplitBgTrans = 1
+" If you wish to enable/disable NeoSolarized from displaying bold, underlined
+" or italicized" typefaces, simply assign 1 or 0 to the appropriate variable.
+" Default values:
+let g:neosolarized_bold = 1
+let g:neosolarized_underline = 1
+let g:neosolarized_italic = 1
+" Used to enable/disable "bold as bright" in Neovim terminal. If colors of bold
+" text output by commands like `ls` aren't what you expect, you might want to
+" try disabling this option. Default value:
+let g:neosolarized_termBoldAsBright = 1
 set background=dark
-colorscheme solarized
+colorscheme NeoSolarized
 filetype plugin on
 " transparency
 hi Normal guibg=NONE ctermbg=NONE
@@ -50,7 +68,7 @@ hi Normal guibg=NONE ctermbg=NONE
 
 " keybindings
 nmap <silent> <Leader>q :q<CR>
-nmap <silent> <Leader>t :terminal<CR>
+nmap <silent> <Leader>t :call CustomTerminal()<CR>
 nmap <silent> <Leader>w :w<CR>
 " case insensitive
 nmap <Leader>i :set ic!<CR>:set ic?<CR>
@@ -60,8 +78,7 @@ nmap <silent> <Leader>s :setlocal spell! spelllang=en_us<CR>
 nmap <silent> <Leader>l :bn<CR>
 nmap <silent> <Leader>h :bp<CR>
 nmap <silent> <Leader>d :bd<CR>
-" split horizontal/vertical
-nmap <silent> <Leader>hs :new<CR>
+" split vertical
 nmap <silent> <Leader>vs :vnew<CR>
 " turn off highlight after search
 nnoremap <silent> <Leader><space> :nohlsearch<CR>
@@ -83,12 +100,16 @@ nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
 " scratchpad
 nmap <silent> gs :setlocal buftype=nofile bufhidden=hide noswapfile<CR>
+" Allow hitting <Esc> to switch to normal mode
+tnoremap <Esc> <C-\><C-n>
 
 
 " airline
 let g:airline_theme = 'solarized'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_close_button = 0
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 
 " ctrlp
@@ -130,3 +151,9 @@ let g:suda_smart_edit = 1
 let g:ycm_global_ycm_extra_conf = '~/.config/nvim/plugged/YouCompleteMe/.ycm_extra_conf.py'
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
+
+
+fun! CustomTerminal()
+    :vnew
+    :terminal
+endf
