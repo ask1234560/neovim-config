@@ -9,12 +9,12 @@ The minimalist feature rich config for neovim
 
 
 ## Plugins installed
-* [altercation/vim-colors-solarized](http://www.github.com/altercation/vim-colors-solarized)
 * [ask1234560/vim-devicons](http://www.github.com/ask1234560/vim-devicons)
 * [ctrlpvim/ctrlp.vim](http://www.github.com/ctrlpvim/ctrlp.vim)
 * [jiangmiao/auto-pairs](http://www.github.com/jiangmiao/auto-pairs)
 * [lambdalisue/suda.vim](http://www.github.com/lambdalisue/suda.vim)
 * [mattn/emmet-vim](http://www.github.com/mattn/emmet-vim)
+* [overcache/NeoSolarized](http://www.github.com/overcache/NeoSolarized)
 * [preservim/nerdcommenter](http://www.github.com/preservim/nerdcommenter)
 * [scrooloose/nerdtree](http://www.github.com/scrooloose/nerdtree)
 * [tpope/vim-fugitive](http://www.github.com/tpope/vim-fugitive)
@@ -27,7 +27,7 @@ The minimalist feature rich config for neovim
 <!-- macro {y$I* Wv$hS]$a(http://www.github.com/pj0} -->
 ## Screenshots
 
-<img src="Screenshots/Screenshot_from_2020-05-01_12:06:45.png" width=1000px>
+<img src="Screenshots/Screenshot_from_2020-09-14_15:04:17.png" width=1000px>
 
 ## Installation
 ```
@@ -42,6 +42,7 @@ The minimalist feature rich config for neovim
 * git clone https://github.com/ask1234560/neovim-config.git nvim
 * curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 * open nvim, :PlugInstall for installing plugins, build YouCompleteMe plugin
+* font used is JetBrainsMono Nerd Font
 ```
 
 ## Key bindings

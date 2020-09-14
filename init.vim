@@ -17,12 +17,12 @@ set clipboard+=unnamedplus
 call plug#begin('~/.config/nvim/plugged')
 " Make sure you use single quotes
 " Plug 'luochen1990/rainbow'
-Plug 'overcache/NeoSolarized'
 Plug 'ask1234560/vim-devicons'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'lambdalisue/suda.vim'
 Plug 'mattn/emmet-vim'
+Plug 'overcache/NeoSolarized'
 Plug 'preservim/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
