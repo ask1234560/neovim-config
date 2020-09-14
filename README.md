@@ -26,7 +26,6 @@ The minimalist feature rich config for neovim
 
 <!-- macro {y$I* Wv$hS]$a(http://www.github.com/pj0} -->
 ## Screenshots
-
 <img src="Screenshots/Screenshot_from_2020-09-14_15:04:17.png" width=1000px>
 
 ## Installation
