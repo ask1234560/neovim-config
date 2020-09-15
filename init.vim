@@ -17,7 +17,6 @@ set clipboard+=unnamedplus
 call plug#begin('~/.config/nvim/plugged')
 " Make sure you use single quotes
 " Plug 'luochen1990/rainbow'
-Plug 'ask1234560/vim-devicons'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'lambdalisue/suda.vim'
@@ -31,6 +30,8 @@ Plug 'unblevable/quick-scope'
 Plug 'Valloric/YouCompleteMe'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+" Always at the end
+Plug 'ask1234560/vim-devicons'
 " Initialize plugin system
 call plug#end()
 
