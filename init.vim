@@ -59,7 +59,7 @@ let g:neosolarized_italic = 1
 " Used to enable/disable "bold as bright" in Neovim terminal. If colors of bold
 " text output by commands like `ls` aren't what you expect, you might want to
 " try disabling this option. Default value:
-let g:neosolarized_termBoldAsBright = 1
+let g:neosolarized_termBoldAsBright = 0
 set background=dark
 colorscheme NeoSolarized
 filetype plugin on
@@ -101,8 +101,8 @@ nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
 " scratchpad
 nmap <silent> gs :setlocal buftype=nofile bufhidden=hide noswapfile<CR>
-" Allow hitting <Esc> to switch to normal mode
-tnoremap <Esc> <C-\><C-n>
+" Allow hitting <Esc><Esc> to switch to normal mode while using terminal
+tnoremap <Esc><Esc> <C-\><C-n>
 
 
 " airline
