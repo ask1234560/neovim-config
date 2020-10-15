@@ -1,13 +1,8 @@
 " general
-set number
-set relativenumber
-set autoread
+set number relativenumber autoread tabstop=4 shiftwidth=4 expandtab inccommand=split clipboard+=unnamedplus
+" set scrolloff=1 sidescrolloff=5
 au FocusGained * :checktime
 let mapleader = ","
-" set tab to 4/ctrl-v<tab> to insert tab
-set tabstop=4 shiftwidth=4 expandtab
-set inccommand=split
-set clipboard+=unnamedplus
 " html skeleton
 " autocmd BufNewFile *.html 0r ~/.config/nvim/templates/html.skel
 " interactive shell
@@ -69,8 +64,10 @@ hi Normal guibg=NONE ctermbg=NONE
 
 " keybindings
 nmap <silent> <Leader>q :q<CR>
-nmap <silent> <Leader>t :call CustomTerminal()<CR>
+nmap <silent> <Leader>tt :call CustomTerminal()<CR>
 nmap <silent> <Leader>w :w<CR>
+"" Set working directory
+nnoremap <leader>. :lcd %:p:h<CR>
 " case insensitive
 nmap <Leader>i :set ic!<CR>:set ic?<CR>
 " spell checker
@@ -103,6 +100,15 @@ nmap <silent> <c-l> :wincmd l<CR>
 nmap <silent> gs :setlocal buftype=nofile bufhidden=hide noswapfile<CR>
 " Allow hitting <Esc><Esc> to switch to normal mode while using terminal
 tnoremap <Esc><Esc> <C-\><C-n>
+" Search mappings: These will make it so that going to the next one in a
+" search will center on the line it's found in.
+nnoremap n nzzzv
+nnoremap N Nzzzv
+"" Tabs
+nnoremap <Tab> gt
+nnoremap <S-Tab> gT
+nnoremap <silent> <Leader>tn :tabnew<CR>
+nnoremap <silent> <Leader>tc :tabclose<CR>
 
 
 " airline
