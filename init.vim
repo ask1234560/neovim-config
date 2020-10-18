@@ -64,7 +64,6 @@ hi Normal guibg=NONE ctermbg=NONE
 
 " keybindings
 nmap <silent> <Leader>q :q<CR>
-nmap <silent> <Leader>tt :call CustomTerminal()<CR>
 nmap <silent> <Leader>w :w<CR>
 "" Set working directory
 nnoremap <leader>. :lcd %:p:h<CR>
@@ -97,9 +96,7 @@ nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
 " scratchpad
-nmap <silent> gs :setlocal buftype=nofile bufhidden=hide noswapfile<CR>
-" Allow hitting <Esc><Esc> to switch to normal mode while using terminal
-tnoremap <Esc><Esc> <C-\><C-n>
+nmap <silent> <Leader>gs :setlocal buftype=nofile bufhidden=hide noswapfile<CR>
 " Search mappings: These will make it so that going to the next one in a
 " search will center on the line it's found in.
 nnoremap n nzzzv
@@ -109,6 +106,13 @@ nnoremap <Tab> gt
 nnoremap <S-Tab> gT
 nnoremap <silent> <Leader>tn :tabnew<CR>
 nnoremap <silent> <Leader>tc :tabclose<CR>
+" terminal
+nmap <silent> <Leader>tt :call CustomTerminal()<CR>
+tnoremap <Esc><Esc> <C-\><C-n>
+" Prefer Neovim terminal insert mode to normal mode.
+autocmd BufEnter term://* startinsert
+ " Make navigation into and out of Neovim terminal splits nicer.
+tnoremap <C-l> <C-\><C-N><C-w>l
 
 
 " airline
@@ -161,6 +165,6 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 
 
 fun! CustomTerminal()
-    :vnew
-    :terminal
+    :vnew | terminal
+    :startinsert
 endf
