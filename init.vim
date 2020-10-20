@@ -1,5 +1,5 @@
 " general
-set number relativenumber autoread tabstop=4 shiftwidth=4 expandtab inccommand=split clipboard+=unnamedplus
+set number relativenumber autoread tabstop=4 shiftwidth=4 expandtab inccommand=split clipboard+=unnamedplus mouse=a cursorline cursorcolumn splitbelow wildmode=longest,full encoding=utf-8
 " set scrolloff=1 sidescrolloff=5
 au FocusGained * :checktime
 let mapleader = ","
@@ -7,6 +7,10 @@ let mapleader = ","
 " autocmd BufNewFile *.html 0r ~/.config/nvim/templates/html.skel
 " interactive shell
 " set shellcmdflag=-ic
+" Vertically center document when entering insert mode
+autocmd InsertEnter * norm zz
+" Remove trailing whitespace on save
+autocmd BufWritePre * %s/\s\+$//e
 
 
 call plug#begin('~/.config/nvim/plugged')
@@ -65,6 +69,8 @@ hi Normal guibg=NONE ctermbg=NONE
 " keybindings
 nmap <silent> <Leader>q :q<CR>
 nmap <silent> <Leader>w :w<CR>
+" Fix Y behaviour
+nmap Y y$
 "" Set working directory
 nnoremap <leader>. :lcd %:p:h<CR>
 " case insensitive
@@ -102,10 +108,9 @@ nmap <silent> <Leader>gs :setlocal buftype=nofile bufhidden=hide noswapfile<CR>
 nnoremap n nzzzv
 nnoremap N Nzzzv
 "" Tabs
-nnoremap <Tab> gt
-nnoremap <S-Tab> gT
 nnoremap <silent> <Leader>tn :tabnew<CR>
 nnoremap <silent> <Leader>tc :tabclose<CR>
+nnoremap <silent> <Leader>ti :tabs<CR>
 " terminal
 nmap <silent> <Leader>tt :call CustomTerminal()<CR>
 tnoremap <Esc><Esc> <C-\><C-n>
@@ -137,7 +142,7 @@ let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
 
 
-" nerdcommenter 
+" nerdcommenter
 let g:NERDSpaceDelims = 1
 let g:NERDDefaultAlign = 'left'
 let g:NERDCommentEmptyLines = 1
@@ -145,20 +150,21 @@ let g:NERDCommentEmptyLines = 1
 
 " quick-scope
 let g:qs_max_chars=120
+let g:qs_buftype_blacklist = ['terminal']
 highlight QuickScopePrimary guifg='#afff5f' gui=underline  ctermfg=37 cterm=underline
 highlight QuickScopeSecondary guifg='#5fffff' gui=undercurl ctermfg=245 cterm=underline
 
 
-" rainbow 
+" rainbow
 let g:rainbow_active = 1
-" let g:rainbow_conf = {'guifgs' : ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick'], 'ctermfgs' : ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']}	
+" let g:rainbow_conf = {'guifgs' : ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick'], 'ctermfgs' : ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']}
 
 
 " suda
 let g:suda_smart_edit = 1
 
 
-" YCM 
+" YCM
 let g:ycm_global_ycm_extra_conf = '~/.config/nvim/plugged/YouCompleteMe/.ycm_extra_conf.py'
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
