@@ -3,7 +3,7 @@ The minimalist feature rich config for neovim
 
 ## Requirement
 * Linux; win or mac not tested
-* Patched fonts aka nerd fonts
+* nerd fonts
 * True color terminal support, [check here](https://gist.github.com/XVilka/8346728)
 * Working nvim, `:checkhealth` for error checking
 
@@ -31,7 +31,7 @@ The minimalist feature rich config for neovim
 ## Installation
 ```
 * install nvim
-	* Debian 
+	* Debian
 		* sudo apt install neovim
 	* Arch
 		* sudo pacman -S neovim
@@ -42,19 +42,4 @@ The minimalist feature rich config for neovim
 * curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 * open nvim, :PlugInstall for installing plugins, build YouCompleteMe plugin
 * font used is JetBrainsMono Nerd Font
-```
-
-## Key bindings
-```
-* Leader => ,
-* ,q => :q
-* ,t => :terminal
-* ,m => most recently used files
-* ,o => open file buffers
-* ,p => fuzzy finder in current directory
-* ,c => set local directory to that of current file
-* <c-{h,j,k,l}> => for left, bottom, top, right in split windows
-* ,spacebar => :nohls
-* 0 and ^ keybinds are interchanged
-* ,l/,h => buffer next/buffer prev
 ```

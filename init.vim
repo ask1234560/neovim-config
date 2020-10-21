@@ -1,16 +1,13 @@
 " general
-set number relativenumber autoread tabstop=4 shiftwidth=4 expandtab inccommand=split clipboard+=unnamedplus mouse=a cursorline cursorcolumn splitbelow wildmode=longest,full encoding=utf-8
-" set scrolloff=1 sidescrolloff=5
-au FocusGained * :checktime
+set autoread clipboard+=unnamedplus cursorcolumn cursorline encoding=utf-8 expandtab inccommand=split mouse=a number relativenumber shiftwidth=4 splitbelow tabstop=4 wildmode=longest,full
 let mapleader = ","
+autocmd BufWritePre * %s/\s\+$//e
+autocmd FocusGained * :checktime
+autocmd InsertEnter * norm zz
 " html skeleton
 " autocmd BufNewFile *.html 0r ~/.config/nvim/templates/html.skel
 " interactive shell
 " set shellcmdflag=-ic
-" Vertically center document when entering insert mode
-autocmd InsertEnter * norm zz
-" Remove trailing whitespace on save
-autocmd BufWritePre * %s/\s\+$//e
 
 
 call plug#begin('~/.config/nvim/plugged')
