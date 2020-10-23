@@ -1,5 +1,5 @@
 " general
-set autoread clipboard+=unnamedplus cursorcolumn cursorline encoding=utf-8 expandtab inccommand=split mouse=a number relativenumber shiftwidth=4 splitbelow tabstop=4 wildmode=longest,full
+set autoread clipboard+=unnamedplus cursorcolumn cursorline encoding=utf-8 expandtab inccommand=split mouse=a number relativenumber shiftwidth=4 tabstop=4 wildmode=longest,full
 let mapleader = ","
 autocmd BufWritePre * %s/\s\+$//e
 autocmd FocusGained * :checktime
@@ -168,6 +168,7 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 
 
 fun! CustomTerminal()
-    :vnew | terminal
+    :100vnew | terminal
+    :set nocursorcolumn nocursorline nonumber norelativenumber
     :startinsert
 endf
