@@ -1,5 +1,5 @@
 " general
-set autoread clipboard+=unnamedplus cursorcolumn cursorline encoding=utf-8 expandtab inccommand=split mouse=a number relativenumber shiftwidth=4 tabstop=4 wildmode=longest,full
+set autoread clipboard+=unnamedplus cursorcolumn cursorline encoding=utf-8 expandtab fillchars=eob:\ ,vert:\| inccommand=split mouse=a number relativenumber shiftwidth=4 tabstop=4 wildmode=longest,full
 let mapleader = ","
 autocmd BufWritePre * %s/\s\+$//e
 autocmd FocusGained * :checktime
@@ -84,7 +84,7 @@ nmap <silent> <Leader>vs :vnew<CR>
 nnoremap <silent> <Leader><space> :nohlsearch<CR>
 " ctrlp
 nnoremap <silent> <Leader>o :CtrlPBuffer<CR>
-nnoremap <silent> <Leader>m :CtrlPMRU<CR>
+nnoremap <silent> <Leader>m :call Ctrlpmru()<CR>
 nnoremap <silent> <Leader>p :CtrlP<CR>
 " NERDTree
 map <silent> <Leader>n :NERDTreeToggle<CR>
@@ -110,7 +110,8 @@ nnoremap <silent> <Leader>tc :tabclose<CR>
 nnoremap <silent> <Leader>ti :tabs<CR>
 " terminal
 nmap <silent> <Leader>tt :call CustomTerminal()<CR>
-tnoremap <Esc><Esc> <C-\><C-n>
+tnoremap <silent> <Esc>n <C-\><C-n>
+tnoremap <silent> <Esc><Esc> <C-\><C-n>:bd!<CR>
 " Prefer Neovim terminal insert mode to normal mode.
 autocmd BufEnter term://* startinsert
  " Make navigation into and out of Neovim terminal splits nicer.
@@ -171,4 +172,11 @@ fun! CustomTerminal()
     :100vnew | terminal
     :set nocursorcolumn nocursorline nonumber norelativenumber
     :startinsert
+endf
+
+
+" ignore patterns in CtrlPMRU
+fun! Ctrlpmru()
+    :CtrlPMRU<CR>
+    :silent !sed -i.bak -e '/\.git\//d' -e '/\/tmp\//d' "$XDG_CACHE_HOME/ctrlp/mru/cache.txt"
 endf
