@@ -149,6 +149,7 @@ let g:NERDCommentEmptyLines = 1
 " quick-scope
 let g:qs_max_chars=120
 let g:qs_buftype_blacklist = ['terminal']
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 highlight QuickScopePrimary guifg='#afff5f' gui=underline  ctermfg=37 cterm=underline
 highlight QuickScopeSecondary guifg='#5fffff' gui=undercurl ctermfg=245 cterm=underline
 
@@ -177,6 +178,6 @@ endf
 
 " ignore patterns in CtrlPMRU
 fun! Ctrlpmru()
-    :CtrlPMRU<CR>
     :silent !sed -i.bak -e '/\.git\//d' -e '/\/tmp\//d' "$XDG_CACHE_HOME/ctrlp/mru/cache.txt"
+    :CtrlPMRU<CR>
 endf
