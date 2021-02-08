@@ -1,5 +1,5 @@
 " general
-set autoread clipboard+=unnamedplus cursorcolumn cursorline encoding=utf-8 expandtab fillchars=eob:\ ,vert:\| inccommand=split mouse=a number relativenumber shiftwidth=4 tabstop=4 wildmode=longest,full
+set autoread clipboard+=unnamedplus nocursorcolumn cursorline encoding=utf-8 expandtab fillchars=eob:\ ,vert:\| inccommand=split mouse=a number relativenumber shiftwidth=4 tabstop=4 wildmode=longest,full
 let mapleader = ","
 autocmd BufWritePre * %s/\s\+$//e
 autocmd FocusGained * :checktime
@@ -24,6 +24,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'unblevable/quick-scope'
 Plug 'Valloric/YouCompleteMe'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " Always at the end
@@ -61,6 +62,7 @@ colorscheme NeoSolarized
 filetype plugin on
 " transparency
 hi Normal guibg=NONE ctermbg=NONE
+hi LineNr guibg=NONE ctermbg=NONE
 
 
 " keybindings
@@ -128,16 +130,17 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 " ctrlp
 let g:ctrlp_working_path_mode = 'a'
-let g:ctrlp_user_command = "find %s -maxdepth 4 -not -path '*.git/*' -type f"
+let g:ctrlp_user_command = "find %s -maxdepth 4 -not -path '*.git/*' -not -path '*node_modules/*' -type f"
 
 
 " nerdtree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-let g:NERDTreeShowLineNumbers=1
-let NERDTreeShowHidden=1
+let g:NERDTreeShowLineNumbers = 1
+let NERDTreeShowHidden = 1
 let NERDTreeMinimalUI = 1
 let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
+" let g:NERDTreeHighlightCursorline = 0
 
 
 " nerdcommenter
