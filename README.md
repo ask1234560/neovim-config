@@ -21,12 +21,14 @@ The minimalist feature rich config for neovim
 * [tpope/vim-surround](http://www.github.com/tpope/vim-surround)
 * [unblevable/quick-scope](http://www.github.com/unblevable/quick-scope)
 * [Valloric/YouCompleteMe](http://www.github.com/Valloric/YouCompleteMe)
+* [sheerun/vim-polyglot](http://www.github.com/sheerun/vim-polyglot)
+* [prettier/vim-prettier](http://www.github.com/prettier/vim-prettier)
 * [vim-airline/vim-airline](http://www.github.com/vim-airline/vim-airline)
 * [vim-airline/vim-airline-themes](http://www.github.com/vim-airline/vim-airline-themes)
 
 <!-- macro {y$I* Wv$hS]$a(http://www.github.com/pj0} -->
 ## Screenshots
-<img src="Screenshots/Screenshot_from_2020-09-14_15:04:17.png" width=1000px>
+<img src="Screenshots/Screenshot_from_2021-05-17_19:48:10.png" width=1000px>
 
 ## Installation
 ```
@@ -41,5 +43,5 @@ The minimalist feature rich config for neovim
 * git clone https://github.com/ask1234560/neovim-config.git nvim
 * curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 * open nvim, :PlugInstall for installing plugins, build YouCompleteMe plugin
-* font used is JetBrainsMono Nerd Font
+* font used is SauceCodePro Nerd Font Mono
 ```
