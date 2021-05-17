@@ -1,11 +1,7 @@
 " general
-set autoread clipboard+=unnamedplus nocursorcolumn cursorline encoding=utf-8 expandtab fillchars=eob:\ ,vert:\| inccommand=split mouse=a number relativenumber shiftwidth=4 tabstop=4 wildmode=longest,full
+set autoread clipboard+=unnamedplus nocursorcolumn nocursorline encoding=utf-8 expandtab fillchars=eob:\ ,vert:\| inccommand=split mouse=a number relativenumber shiftwidth=4 tabstop=4 wildmode=longest,full
 let mapleader = ","
-autocmd BufWritePre * %s/\s\+$//e
-autocmd FocusGained * :checktime
-autocmd InsertEnter * norm zz
 " html skeleton
-" autocmd BufNewFile *.html 0r ~/.config/nvim/templates/html.skel
 " interactive shell
 " set shellcmdflag=-ic
 
@@ -19,11 +15,12 @@ Plug 'lambdalisue/suda.vim'
 Plug 'mattn/emmet-vim'
 Plug 'overcache/NeoSolarized'
 Plug 'preservim/nerdcommenter'
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'unblevable/quick-scope'
 Plug 'Valloric/YouCompleteMe'
+Plug 'sheerun/vim-polyglot'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -63,6 +60,7 @@ filetype plugin on
 " transparency
 hi Normal guibg=NONE ctermbg=NONE
 hi LineNr guibg=NONE ctermbg=NONE
+hi CursorLineNr guibg=NONE guifg=NONE
 
 
 " keybindings
@@ -101,7 +99,7 @@ nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
 " scratchpad
-nmap <silent> <Leader>gs :setlocal buftype=nofile bufhidden=hide noswapfile<CR>
+nmap <Leader>ss :setlocal buftype=nofile bufhidden=hide noswapfile<CR>
 " Search mappings: These will make it so that going to the next one in a
 " search will center on the line it's found in.
 nnoremap n nzzzv
@@ -115,9 +113,15 @@ nmap <silent> <Leader>tt :call CustomTerminal()<CR>
 tnoremap <silent> <Esc>n <C-\><C-n>
 tnoremap <silent> <Esc><Esc> <C-\><C-n>:bd!<CR>
 " Prefer Neovim terminal insert mode to normal mode.
-autocmd BufEnter term://* startinsert
  " Make navigation into and out of Neovim terminal splits nicer.
-tnoremap <C-l> <C-\><C-N><C-w>l
+tnoremap <C-k> <C-\><C-N><C-w>k
+" Remove white spaces
+nnoremap <Leader>rs :%s/\s\+$//e<CR>
+" vim fugitive
+nnoremap <Leader>gd :Gvdiffsplit<CR>
+nnoremap <Leader>gs :Git<CR>
+" wrap
+nnoremap <Leader>dw :windo set wrap<CR><C-w>h
 
 
 " airline
@@ -130,11 +134,10 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 " ctrlp
 let g:ctrlp_working_path_mode = 'a'
-let g:ctrlp_user_command = "find %s -maxdepth 4 -not -path '*.git/*' -not -path '*node_modules/*' -type f"
-
+" let g:ctrlp_user_command = "find %s -maxdepth 4 -not -path '*.git/*' -not -path '*node_modules/*' -type f"
+let g:ctrlp_user_command = 'find %s -maxdepth 4 -path "*.git/*" -prune -o -path "*node_modules/*" -prune -o \( -type f -print \)'
 
 " nerdtree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let g:NERDTreeShowLineNumbers = 1
 let NERDTreeShowHidden = 1
 let NERDTreeMinimalUI = 1
@@ -173,7 +176,7 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 
 
 fun! CustomTerminal()
-    :100vnew | terminal
+    :bo 15new | terminal
     :set nocursorcolumn nocursorline nonumber norelativenumber
     :startinsert
 endf
@@ -184,3 +187,12 @@ fun! Ctrlpmru()
     :silent !sed -i.bak -e '/\.git\//d' -e '/\/tmp\//d' "$XDG_CACHE_HOME/ctrlp/mru/cache.txt"
     :CtrlPMRU<CR>
 endf
+
+" autocmds
+" autocmd BufWritePre * %s/\s\+$//e
+autocmd FocusGained * :checktime
+autocmd InsertEnter * norm zz
+" autocmd VimEnter    * if &diff | execute 'windo set wrap' | endif
+" autocmd BufNewFile *.html 0r ~/.config/nvim/templates/html.skel
+autocmd BufEnter term://* startinsert
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
