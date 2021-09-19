@@ -1,5 +1,5 @@
 " general
-" set clipboard+=unnamedplus 
+" set clipboard+=unnamedplus
 set autoread nocursorcolumn nocursorline encoding=utf-8 expandtab fillchars=eob:\ ,vert:\| inccommand=split mouse=a number relativenumber shiftwidth=4 tabstop=4 wildmode=longest,full
 let mapleader = ","
 " html skeleton
@@ -22,7 +22,9 @@ Plug 'tpope/vim-surround'
 Plug 'unblevable/quick-scope'
 Plug 'Valloric/YouCompleteMe'
 Plug 'sheerun/vim-polyglot'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'prettier/vim-prettier', { 'do': 'npm install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
+" autopep8 needed
+Plug 'tell-k/vim-autopep8', { 'for': ['python'] }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " Always at the end
@@ -65,32 +67,32 @@ hi CursorLineNr guibg=NONE guifg=NONE
 
 
 " keybindings
-nmap <silent> <Leader>q :q<CR>
-nmap <silent> <Leader>w :w<CR>
+nmap <silent> <leader>q :q<CR>
+nmap <silent> <leader>w :w<CR>
 " Fix Y behaviour
 nmap Y y$
 "" Set working directory
 nnoremap <leader>. :lcd %:p:h<CR>
 " case insensitive
-nmap <Leader>i :set ic!<CR>:set ic?<CR>
+nmap <leader>i :set ic!<CR>:set ic?<CR>
 " spell checker
-nmap <silent> <Leader>s :setlocal spell! spelllang=en_us<CR>
+nmap <silent> <leader>s :setlocal spell! spelllang=en_us<CR>
 " buffer next/prev/delete
-nmap <silent> <Leader>l :bn<CR>
-nmap <silent> <Leader>h :bp<CR>
-nmap <silent> <Leader>d :bd<CR>
+nmap <silent> <leader>l :bn<CR>
+nmap <silent> <leader>h :bp<CR>
+nmap <silent> <leader>d :bd<CR>
 " split vertical
-nmap <silent> <Leader>vs :vnew<CR>
+nmap <silent> <leader>vs :vnew<CR>
 " turn off highlight after search
-nnoremap <silent> <Leader><space> :nohlsearch<CR>
+nnoremap <silent> <leader><space> :nohlsearch<CR>
 " ctrlp
-nnoremap <silent> <Leader>o :CtrlPBuffer<CR>
-nnoremap <silent> <Leader>m :call Ctrlpmru()<CR>
-nnoremap <silent> <Leader>p :CtrlP<CR>
+nnoremap <silent> <leader>o :CtrlPBuffer<CR>
+nnoremap <silent> <leader>m :call Ctrlpmru()<CR>
+nnoremap <silent> <leader>p :CtrlP<CR>
 " NERDTree
-map <silent> <Leader>n :NERDTreeToggle<CR>
+map <silent> <leader>n :NERDTreeToggle<CR>
 " navigate to file
-nmap <silent> <Leader>c :NERDTreeFind<CR>
+nmap <silent> <leader>c :NERDTreeFind<CR>
 " 0 first char/^ beg of line
 noremap 0 ^
 noremap ^ 0
@@ -100,29 +102,29 @@ nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
 " scratchpad
-nmap <Leader>ss :setlocal buftype=nofile bufhidden=hide noswapfile<CR>
+nmap <leader>ss :setlocal buftype=nofile bufhidden=hide noswapfile<CR>
 " Search mappings: These will make it so that going to the next one in a
 " search will center on the line it's found in.
 nnoremap n nzzzv
 nnoremap N Nzzzv
 "" Tabs
-nnoremap <silent> <Leader>tn :tabnew<CR>
-nnoremap <silent> <Leader>tc :tabclose<CR>
-nnoremap <silent> <Leader>ti :tabs<CR>
+nnoremap <silent> <leader>tn :tabnew<CR>
+nnoremap <silent> <leader>tc :tabclose<CR>
+nnoremap <silent> <leader>ti :tabs<CR>
 " terminal
-nmap <silent> <Leader>tt :call CustomTerminal()<CR>
+nmap <silent> <leader>tt :call CustomTerminal()<CR>
 tnoremap <silent> <Esc>n <C-\><C-n>
 tnoremap <silent> <Esc><Esc> <C-\><C-n>:bd!<CR>
 " Prefer Neovim terminal insert mode to normal mode.
  " Make navigation into and out of Neovim terminal splits nicer.
 tnoremap <C-k> <C-\><C-N><C-w>k
 " Remove white spaces
-nnoremap <Leader>rs :%s/\s\+$//e<CR>
+nnoremap <leader>rs :%s/\s\+$//e<CR>
 " vim fugitive
-nnoremap <Leader>gd :Gvdiffsplit<CR>
-nnoremap <Leader>gs :Git<CR>
+nnoremap <leader>gd :Gvdiffsplit<CR>
+nnoremap <leader>gs :Git<CR>
 " wrap
-nnoremap <Leader>dw :windo set wrap<CR><C-w>h
+nnoremap <leader>dw :windo set wrap<CR><C-w>h
 
 
 " airline
@@ -133,8 +135,12 @@ let g:airline#extensions#tabline#show_close_button = 0
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 
+" autopep8
+let g:autopep8_disable_show_diff=1
+
+
 " ctrlp
-let g:ctrlp_working_path_mode = 'a'
+let g:ctrlp_working_path_mode = 'w'
 " let g:ctrlp_user_command = "find %s -maxdepth 4 -not -path '*.git/*' -not -path '*node_modules/*' -type f"
 let g:ctrlp_user_command = 'find %s -maxdepth 4 -path "*.git/*" -prune -o -path "*node_modules/*" -prune -o \( -type f -print \)'
 
@@ -190,10 +196,16 @@ fun! Ctrlpmru()
 endf
 
 " autocmds
-" autocmd BufWritePre * %s/\s\+$//e
-autocmd FocusGained * :checktime
-autocmd InsertEnter * norm zz
-" autocmd VimEnter    * if &diff | execute 'windo set wrap' | endif
-" autocmd BufNewFile *.html 0r ~/.config/nvim/templates/html.skel
-autocmd BufEnter term://* startinsert
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+augroup autocmdgroup
+    autocmd! autocmdgroup
+    " autocmd BufWritePre * %s/\s\+$//e
+    autocmd FocusGained * :checktime
+    autocmd InsertEnter * norm zz
+    " autocmd VimEnter    * if &diff | execute 'windo set wrap' | endif
+    " autocmd BufNewFile *.html 0r ~/.config/nvim/templates/html.skel
+    autocmd BufEnter term://* startinsert
+    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+    " code prettier
+    autocmd Filetype python nmap <buffer> <leader>, :Autopep8<CR>
+    autocmd Filetype javascript,typescript,css,less,scss,json,graphql,markdown,vue,svelte,yaml,html nmap <buffer> <leader>, :Prettier<CR>
+augroup end
