@@ -1,6 +1,6 @@
 " general
 " set clipboard+=unnamedplus
-set autoread nocursorcolumn nocursorline encoding=utf-8 expandtab fillchars=eob:\ ,vert:\| inccommand=split mouse=a number relativenumber shiftwidth=4 tabstop=4 wildmode=longest,full
+set autoread nocursorcolumn nocursorline encoding=utf-8 expandtab fillchars=eob:\ ,vert:\| inccommand=split mouse=a number relativenumber shiftwidth=4 tabstop=4 wildmode=longest,full lazyredraw
 let mapleader = ","
 " html skeleton
 " interactive shell
@@ -28,7 +28,7 @@ Plug 'tell-k/vim-autopep8', { 'for': ['python'] }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " Always at the end
-Plug 'ask1234560/vim-devicons'
+Plug 'ryanoasis/vim-devicons'
 " Initialize plugin system
 call plug#end()
 
