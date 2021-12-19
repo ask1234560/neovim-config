@@ -87,7 +87,8 @@ nmap <silent> <leader>vs :vnew<CR>
 nnoremap <silent> <leader><space> :nohlsearch<CR>
 " ctrlp
 nnoremap <silent> <leader>o :CtrlPBuffer<CR>
-nnoremap <silent> <leader>m :call Ctrlpmru()<CR>
+" nnoremap <silent> <leader>m :call Ctrlpmru()<CR>
+nnoremap <silent> <leader>m :CtrlPMRU<CR>
 nnoremap <silent> <leader>p :CtrlP<CR>
 " NERDTree
 map <silent> <leader>n :NERDTreeToggle<CR>
@@ -141,8 +142,7 @@ let g:autopep8_disable_show_diff=1
 
 " ctrlp
 let g:ctrlp_working_path_mode = 'w'
-" let g:ctrlp_user_command = "find %s -maxdepth 4 -not -path '*.git/*' -not -path '*node_modules/*' -type f"
-let g:ctrlp_user_command = 'find %s -maxdepth 4 -path "*.git/*" -prune -o -path "*node_modules/*" -prune -o \( -type f -print \)'
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard', 'find %s -maxdepth 3 -type f']
 
 " nerdtree
 let g:NERDTreeShowLineNumbers = 1
