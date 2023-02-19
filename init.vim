@@ -13,18 +13,18 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'lambdalisue/suda.vim'
-Plug 'mattn/emmet-vim'
+" Plug 'mattn/emmet-vim'
 Plug 'overcache/NeoSolarized'
 Plug 'preservim/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'tpope/vim-fugitive'
+" Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'unblevable/quick-scope'
-Plug 'Valloric/YouCompleteMe'
-Plug 'sheerun/vim-polyglot'
-Plug 'prettier/vim-prettier', { 'do': 'npm install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
+" Plug 'Valloric/YouCompleteMe'
+" Plug 'sheerun/vim-polyglot'
+" Plug 'prettier/vim-prettier', { 'do': 'npm install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
 " autopep8 needed
-Plug 'tell-k/vim-autopep8', { 'for': ['python'] }
+" Plug 'tell-k/vim-autopep8', { 'for': ['python'] }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " Always at the end
