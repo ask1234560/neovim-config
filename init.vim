@@ -15,11 +15,13 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'lambdalisue/suda.vim'
 " Plug 'mattn/emmet-vim'
 Plug 'overcache/NeoSolarized'
-Plug 'preservim/nerdcommenter'
+" Plug 'preservim/nerdcommenter'
+Plug 'tpope/vim-commentary'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 " Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-Plug 'unblevable/quick-scope'
+Plug 'easymotion/vim-easymotion'
+" Plug 'unblevable/quick-scope'
 " Plug 'Valloric/YouCompleteMe'
 " Plug 'sheerun/vim-polyglot'
 " Plug 'prettier/vim-prettier', { 'do': 'npm install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
@@ -137,7 +139,7 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 
 " autopep8
-let g:autopep8_disable_show_diff=1
+" let g:autopep8_disable_show_diff=1
 
 
 " ctrlp
@@ -154,21 +156,21 @@ let g:NERDTreeDirArrowCollapsible = ''
 
 
 " nerdcommenter
-let g:NERDSpaceDelims = 1
-let g:NERDDefaultAlign = 'left'
-let g:NERDCommentEmptyLines = 1
+" let g:NERDSpaceDelims = 1
+" let g:NERDDefaultAlign = 'left'
+" let g:NERDCommentEmptyLines = 1
 
 
 " quick-scope
-let g:qs_max_chars=120
-let g:qs_buftype_blacklist = ['terminal']
-let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
-highlight QuickScopePrimary guifg='#afff5f' gui=underline  ctermfg=37 cterm=underline
-highlight QuickScopeSecondary guifg='#5fffff' gui=undercurl ctermfg=245 cterm=underline
+" let g:qs_max_chars=120
+" let g:qs_buftype_blacklist = ['terminal']
+" let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+" highlight QuickScopePrimary guifg='#afff5f' gui=underline  ctermfg=37 cterm=underline
+" highlight QuickScopeSecondary guifg='#5fffff' gui=undercurl ctermfg=245 cterm=underline
 
 
 " rainbow
-let g:rainbow_active = 1
+" let g:rainbow_active = 1
 " let g:rainbow_conf = {'guifgs' : ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick'], 'ctermfgs' : ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']}
 
 
@@ -177,9 +179,9 @@ let g:suda_smart_edit = 1
 
 
 " YCM
-let g:ycm_global_ycm_extra_conf = '~/.config/nvim/plugged/YouCompleteMe/.ycm_extra_conf.py'
-let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_autoclose_preview_window_after_completion = 1
+" let g:ycm_global_ycm_extra_conf = '~/.config/nvim/plugged/YouCompleteMe/.ycm_extra_conf.py'
+" let g:ycm_autoclose_preview_window_after_insertion = 1
+" let g:ycm_autoclose_preview_window_after_completion = 1
 
 
 fun! CustomTerminal()
@@ -206,6 +208,6 @@ augroup autocmdgroup
     autocmd BufEnter term://* startinsert
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
     " code prettier
-    autocmd Filetype python nmap <buffer> <leader>, :Autopep8<CR>
-    autocmd Filetype javascript,typescript,css,less,scss,json,graphql,markdown,vue,svelte,yaml,html nmap <buffer> <leader>, :Prettier<CR>
+    " autocmd Filetype python nmap <buffer> <leader>, :Autopep8<CR>
+    " autocmd Filetype javascript,typescript,css,less,scss,json,graphql,markdown,vue,svelte,yaml,html nmap <buffer> <leader>, :Prettier<CR>
 augroup end
