@@ -124,8 +124,8 @@ tnoremap <C-k> <C-\><C-N><C-w>k
 " Remove white spaces
 nnoremap <leader>rs :%s/\s\+$//e<CR>
 " vim fugitive
-nnoremap <leader>gd :Gvdiffsplit<CR>
-nnoremap <leader>gs :Git<CR>
+" nnoremap <leader>gd :Gvdiffsplit<CR>
+" nnoremap <leader>gs :Git<CR>
 " wrap
 nnoremap <leader>dw :windo set wrap<CR><C-w>h
 
