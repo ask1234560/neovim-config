@@ -2,35 +2,23 @@
 " set clipboard+=unnamedplus
 set autoread nocursorcolumn nocursorline encoding=utf-8 expandtab fillchars=eob:\ ,vert:\| inccommand=split mouse=a number relativenumber shiftwidth=4 tabstop=4 wildmode=longest,full lazyredraw
 let mapleader = ","
-" html skeleton
 " interactive shell
 " set shellcmdflag=-ic
 
 
 call plug#begin('~/.config/nvim/plugged')
-" Make sure you use single quotes
-" Plug 'luochen1990/rainbow'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'lambdalisue/suda.vim'
-" Plug 'mattn/emmet-vim'
 Plug 'overcache/NeoSolarized'
-" Plug 'preservim/nerdcommenter'
 Plug 'tpope/vim-commentary'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-" Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'easymotion/vim-easymotion'
-" Plug 'unblevable/quick-scope'
-" Plug 'Valloric/YouCompleteMe'
-" Plug 'sheerun/vim-polyglot'
-" Plug 'prettier/vim-prettier', { 'do': 'npm install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
-" autopep8 needed
-" Plug 'tell-k/vim-autopep8', { 'for': ['python'] }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " Always at the end
-Plug 'ryanoasis/vim-devicons'
+Plug 'ryanoasis/vim-devicons', { 'on': 'NERDTreeToggle' }
 " Initialize plugin system
 call plug#end()
 
@@ -138,10 +126,6 @@ let g:airline#extensions#tabline#show_close_button = 0
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 
-" autopep8
-" let g:autopep8_disable_show_diff=1
-
-
 " ctrlp
 let g:ctrlp_working_path_mode = 'w'
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard', 'find %s -maxdepth 3 -type f']
@@ -155,33 +139,8 @@ let g:NERDTreeDirArrowCollapsible = ''
 " let g:NERDTreeHighlightCursorline = 0
 
 
-" nerdcommenter
-" let g:NERDSpaceDelims = 1
-" let g:NERDDefaultAlign = 'left'
-" let g:NERDCommentEmptyLines = 1
-
-
-" quick-scope
-" let g:qs_max_chars=120
-" let g:qs_buftype_blacklist = ['terminal']
-" let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
-" highlight QuickScopePrimary guifg='#afff5f' gui=underline  ctermfg=37 cterm=underline
-" highlight QuickScopeSecondary guifg='#5fffff' gui=undercurl ctermfg=245 cterm=underline
-
-
-" rainbow
-" let g:rainbow_active = 1
-" let g:rainbow_conf = {'guifgs' : ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick'], 'ctermfgs' : ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']}
-
-
 " suda
 let g:suda_smart_edit = 1
-
-
-" YCM
-" let g:ycm_global_ycm_extra_conf = '~/.config/nvim/plugged/YouCompleteMe/.ycm_extra_conf.py'
-" let g:ycm_autoclose_preview_window_after_insertion = 1
-" let g:ycm_autoclose_preview_window_after_completion = 1
 
 
 fun! CustomTerminal()
@@ -207,7 +166,4 @@ augroup autocmdgroup
     " autocmd BufNewFile *.html 0r ~/.config/nvim/templates/html.skel
     autocmd BufEnter term://* startinsert
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-    " code prettier
-    " autocmd Filetype python nmap <buffer> <leader>, :Autopep8<CR>
-    " autocmd Filetype javascript,typescript,css,less,scss,json,graphql,markdown,vue,svelte,yaml,html nmap <buffer> <leader>, :Prettier<CR>
 augroup end
