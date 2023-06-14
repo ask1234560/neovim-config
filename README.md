@@ -2,11 +2,9 @@
 The minimalist feature rich config for neovim
 
 ## Requirement
-* Linux; win or mac not tested
+* neovim
 * nerd fonts
 * True color terminal support, [check here](https://gist.github.com/XVilka/8346728)
-* Working nvim, `:checkhealth` for error checking
-
 
 ## Plugins installed
 * [ctrlpvim/ctrlp.vim](https://www.github.com/ctrlpvim/ctrlp.vim)
@@ -27,15 +25,7 @@ The minimalist feature rich config for neovim
 
 ## Installation
 ```
-* install nvim
-	* Debian
-		* sudo apt install neovim
-	* Arch
-		* sudo pacman -S neovim
-* mkdir -p ~/.config
-* cd ~/.config
-* mv nvim nvim_bak 2>/dev/null
-* git clone https://github.com/ask1234560/neovim-config.git nvim
+* git clone --single-branch --branch performance https://github.com/ask1234560/neovim-config.git ~/.config/nvim
 * sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 * open nvim, :PlugInstall for installing plugins.
