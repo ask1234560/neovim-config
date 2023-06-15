@@ -116,6 +116,9 @@ nnoremap <leader>rs :%s/\s\+$//e<CR>
 " nnoremap <leader>gs :Git<CR>
 " wrap
 nnoremap <leader>dw :windo set wrap<CR><C-w>h
+" copy current file path to +
+nmap <leader>y :let @+ = expand("%")<CR>
+nmap <leader>yy :let @+ = expand("%:p")<CR>
 
 
 " airline
@@ -134,8 +137,8 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standar
 let g:NERDTreeShowLineNumbers = 1
 let NERDTreeShowHidden = 1
 let NERDTreeMinimalUI = 1
-let g:NERDTreeDirArrowExpandable = ''
-let g:NERDTreeDirArrowCollapsible = ''
+let g:NERDTreeDirArrowExpandable = '󰁔'
+let g:NERDTreeDirArrowCollapsible = '󰁅'
 " let g:NERDTreeHighlightCursorline = 0
 
 
