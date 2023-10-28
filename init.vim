@@ -12,7 +12,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'lambdalisue/suda.vim'
 Plug 'overcache/NeoSolarized'
 Plug 'tpope/vim-commentary'
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tpope/vim-surround'
 Plug 'easymotion/vim-easymotion'
 Plug 'vim-airline/vim-airline'
