@@ -115,7 +115,7 @@ nnoremap <leader>rs :%s/\s\+$//e<CR>
 " nnoremap <leader>gd :Gvdiffsplit<CR>
 " nnoremap <leader>gs :Git<CR>
 " wrap
-nnoremap <leader>dw :windo set wrap<CR><C-w>h
+nnoremap <leader>dw :windo set wrap!<CR><C-w>h
 " copy current file path to +
 nmap <leader>y :let @+ = expand("%")<CR>
 nmap <leader>yy :let @+ = expand("%:p")<CR>
