@@ -1,5 +1,5 @@
 " general
-" set clipboard+=unnamedplus
+set clipboard+=unnamedplus
 set autoread nocursorcolumn nocursorline encoding=utf-8 expandtab fillchars=eob:\ ,vert:\| inccommand=split mouse=a number relativenumber shiftwidth=4 tabstop=4 wildmode=longest,full lazyredraw
 let mapleader = ","
 " interactive shell
